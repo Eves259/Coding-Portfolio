@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="header">
+    <h1 id="heading">Coding Portfolio</h1>
+</div>
+
+<div class="navbar">
+    <button id="switchToDarkMode" onclick="dark()">Switch Colors</button>
+    <a class="active" href="index.html">Home</a>
+    <a href="html/resume.html">Resume</a>
+    <a href="html/gallery.html">Gallery</a>
+    <a href="html/gallery.html">About Me</a>
+</div>
+
+<br>
+
+<div class="slideShow">
+
+<a class="previous" onclick="changeSlide(-1)">&#129144</a>
+
+<div class="overview">
+    <h2 id="overview-text">Hello, my name is Ethan Vesely</h2>
+    <a href="https://github.com/"><img id="slide" src="images/headshot.jpg"></a>
+</div>
+
+<div class="overview">
+    <h2 id="overview-text">This website contains examples of my work</h2>
+    <a href="html/gallery.html"><img id="slide" src="images/Screenshot (11).png"></a>
+</div>
+
+<div class="overview">
+    <h2 id="overview-text">Along with my resume and ways to contact me</h2>
+    <a href="html/resume.html"><img id="slide" src="images/Screenshot (29).png"></a>
+</div>
+
+<a class="next" onclick="changeSlide(1)">&#129146</a>
+</div>
+
+<br>
+
+<div class="footer">
+    <h2 id="footer-text">Contact Info/Github</h2>
+    <h3 id="contact">Phone Number: (480)-721-1229</h3>
+    <h3 id="contact">Work Email: <a id="contact-link" href="mailto: eeveswork@gmail.com">eeveswork@gmail.com</a></h3>
+    <h3 id="contact">Github: <a id="contact-link" href="https://github.com/">https://github.com/</a></h3>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
