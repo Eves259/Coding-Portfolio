@@ -22,6 +22,10 @@ a {
   text-shadow: rgba(191, 191, 240, 0.253) 0.3rem 0rem 1rem;
 }
 
+#header-img {
+  width: 10rem;
+}
+
 #switchToDarkMode {
   background-color: transparent;
   color: black;
@@ -39,9 +43,15 @@ a {
   text-align: center;
 }
 
+#contact-number {
+  font-size: 1.5rem;
+  color: #3872ec;
+  text-align: center;
+}
+
 #contact-link {
   font-size: 1.5rem;
-  color: white;
+  color: #3872ec;
   text-align: center;
   text-decoration: underline;
 }
@@ -59,6 +69,18 @@ a {
   height: 45rem;
   -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
           box-shadow: #28ff5e 0.3rem 0rem 1rem;
+}
+
+#logo {
+  border: white 0.3rem solid;
+  width: 50rem;
+  height: 45rem;
+  -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
+          box-shadow: #28ff5e 0.3rem 0rem 1rem;
+}
+
+#logo-2 {
+  display: none;
 }
 
 #overview-text {
@@ -90,6 +112,10 @@ a {
   -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
           box-shadow: #28ff5e 0.3rem 0rem 1rem;
   border: white 0.3rem solid;
+}
+
+.active {
+  color: #3872ec;
 }
 
 /*Slideshow Classes*/
@@ -152,6 +178,10 @@ a {
           box-shadow: #713dae 0.3rem 0rem 1rem;
 }
 
+.darkmode a {
+  color: white;
+}
+
 .darkmode
 .slideShow
 .overview
@@ -161,10 +191,47 @@ a
           box-shadow: #713dae 0.3rem 0rem 1rem;
 }
 
+.darkmode
+.slideShow
+.overview
+a
+#logo {
+  display: none;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#logo-2 {
+  display: block;
+  border: white 0.3rem solid;
+  width: 50rem;
+  height: 45rem;
+  -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
+          box-shadow: #713dae 0.3rem 0rem 1rem;
+}
+
 .darkmode .footer {
   background-color: #713dae;
   -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
           box-shadow: #713dae 0.3rem 0rem 1rem;
+}
+
+.darkmode #footer-text {
+  color: white;
+}
+
+.darkmode #contact-link {
+  color: orange;
+}
+
+.darkmode #contact-number {
+  color: orange;
+}
+
+.darkmode .active {
+  color: orange;
 }
 
 /*End of Darkmode*/

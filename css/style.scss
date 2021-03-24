@@ -1,6 +1,8 @@
 $background-color: #28ff5e;
 $darkmode-background-color: #713dae;
 $text-color: white;
+$nav-text-color: #3872ec;
+$footer-text-color: #3872ec;
 $text-shadow: rgba(191, 191, 240, 0.253)  0.3rem 0rem 1rem;
 $box-shadow: #28ff5e 0.3rem 0rem 1rem;
 $darkmode-box-shadow: #713dae 0.3rem 0rem 1rem;
@@ -30,6 +32,10 @@ a {
     text-shadow: $text-shadow;
 }
 
+#header-img {
+    width: 10rem;
+}
+
 #switchToDarkMode {
     background-color: transparent;
     color: black;
@@ -47,9 +53,15 @@ a {
     text-align: center;
 }
 
+#contact-number {
+    font-size: 1.5rem;
+    color: $footer-text-color;
+    text-align: center;
+}
+
 #contact-link {
     font-size: 1.5rem;
-    color: $text-color;
+    color: $footer-text-color;
     text-align: center;
     text-decoration: underline;
 }
@@ -66,6 +78,17 @@ a {
     width: 50rem;
     height: 45rem;
     box-shadow: $box-shadow;
+}
+
+#logo {
+    border: $border;
+    width: 50rem;
+    height: 45rem;
+    box-shadow: $box-shadow;
+}
+
+#logo-2 {
+    display: none;
 }
 
 #overview-text {
@@ -91,6 +114,10 @@ a {
     background-color: $background-color;
     box-shadow: $box-shadow;
     border: $border;
+}
+
+.active {
+    color: $nav-text-color;
 }
 
 /*Slideshow Classes*/
@@ -140,6 +167,9 @@ a {
     background-color: $darkmode-background-color;
     box-shadow: $darkmode-box-shadow;
     }
+    a {
+        color: $text-color;
+    }
 }
 
 .darkmode
@@ -150,12 +180,48 @@ a
     box-shadow: $darkmode-box-shadow;
 }
 
+.darkmode
+.slideShow
+.overview
+a
+#logo {
+    display: none;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#logo-2 {
+    display: block;
+    border: $border;
+    width: 50rem;
+    height: 45rem;
+    box-shadow: $darkmode-box-shadow;
+}
+
 .darkmode {
     .footer {
     background-color: $darkmode-background-color;
     box-shadow: $darkmode-box-shadow;
     }
+    #footer-text {
+        color: $text-color;
+    }
+    #contact-link {
+        color: orange;
+    }
+    #contact-number {
+        color: orange;
+    }
 }
+
+.darkmode {
+    .active {
+        color: orange;
+    }
+}
+
 
 /*End of Darkmode*/
 
