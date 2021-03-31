@@ -4,19 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<button id="b1" onclick="dark()">Dark Mode</button>
-
-<div class="navbar">
-    <div class="item-1"><h1>Home</h1></div>
-    <div class="item-2"><h1>Resume</h1></div>
-    <div class="item-3"><h1 class="active">Gallery</h1></div>
-    <div class="item-4"><h1>About Me</h1></div>
+<div class="header">
+    <h1 id="heading">Coding Portfolio</h1>
 </div>
 
-<script src="index.js"></script>
+<div class="navbar">
+    <button id="switchToDarkMode" onclick="dark()">Switch Colors</button>
+    <a href="../index.html">Home</a>
+    <a href="../html/resume.html">Resume</a>
+    <a class="active" href="../html/gallery.html">Gallery</a>
+    <a href="../html/about me.html">About Me</a>
+</div>
+
+<div class="gallery-container">
+<div class="site-1"><a href="https://eves259.github.io/Econ-Project/"><img id="website" src="../images/Screenshot (11).png"></a></div>
+<div class="site-2"><img id="website" src="../images/Screenshot (12).png"></div>
+<div class="site-3"><img id="website" src="../images/"></div>
+<div class="site-4"><img id="website" src="../images/"></div>
+<div class="site-5"><img id="website" src="../images/"></div>
+<div class="site-6"><img id="website" src="../images/"></div>
+</div>
+
+<div class="footer">
+    <h2 id="footer-text">Contact Info/Github</h2>
+    <h3 id="contact">Phone Number: <a id="contact-number">(480)-721-1229</a></h3>
+    <h3 id="contact">Work Email: <a id="contact-link" href="mailto: eeveswork@gmail.com">eeveswork@gmail.com</a></h3>
+    <h3 id="contact">Github: <a id="contact-link" href="https://github.com/">https://github.com/</a></h3>
+</div>
+
+<script src="../script.js"></script>
 </body>
 </html>

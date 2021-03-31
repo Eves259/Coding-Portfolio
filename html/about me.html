@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<button id="b1" onclick="dark()">Dark Mode</button>
+    <div class="header">
+        <h1 id="heading">Coding Portfolio</h1>
+    </div>
+    
+    <div class="navbar">
+        <button id="switchToDarkMode" onclick="dark()">Switch Colors</button>
+        <a href="../index.html">Home</a>
+        <a href="../html/resume.html">Resume</a>
+        <a href="../html/gallery.html">Gallery</a>
+        <a class="active" href="../html/about me.html">About Me</a>
+    </div>
+    
+    <div class="footer">
+        <h2 id="footer-text">Contact Info/Github</h2>
+        <h3 id="contact">Phone Number: <a id="contact-number">(480)-721-1229</a></h3>
+        <h3 id="contact">Work Email: <a id="contact-link" href="mailto: eeveswork@gmail.com">eeveswork@gmail.com</a></h3>
+        <h3 id="contact">Github: <a id="contact-link" href="https://github.com/">https://github.com/</a></h3>
+    </div>
 
-<div class="navbar">
-    <div class="item-1"><h1>Home</h1></div>
-    <div class="item-2"><h1>Resume</h1></div>
-    <div class="item-3"><h1>Gallery</h1></div>
-    <div class="item-4"><h1 class="active">About Me</h1></div>
-</div>
-
-<script src="index.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>

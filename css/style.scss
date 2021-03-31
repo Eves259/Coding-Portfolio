@@ -1,6 +1,7 @@
 $background-color: #28ff5e;
 $darkmode-background-color: #713dae;
 $text-color: white;
+$darkmode-text-color: orange;
 $nav-text-color: #3872ec;
 $footer-text-color: #3872ec;
 $text-shadow: rgba(191, 191, 240, 0.253)  0.3rem 0rem 1rem;
@@ -35,6 +36,50 @@ a {
 #header-img {
     width: 10rem;
 }
+
+/*Gallery*/
+#website {
+    width: 32rem;
+    border: solid .3rem white;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 12rem 25rem;
+    grid-template-rows: 3rem 35rem 20rem 10rem;
+}
+
+.site-1 {
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.site-2 {
+    grid-column: 4/4;
+    grid-row: 2/2;
+}
+
+.site-3 {
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+
+.site-4 {
+    grid-column: 4/4;
+    grid-row: 3/3;
+}
+
+.site-5 {
+    grid-column: 2/2;
+    grid-row: 4/4;
+}
+
+.site-6 {
+    grid-column: 4/4;
+    grid-row: 4/4;
+}
+
+/*Gallery End*/
 
 #switchToDarkMode {
     background-color: transparent;
@@ -209,16 +254,16 @@ a
         color: $text-color;
     }
     #contact-link {
-        color: orange;
+        color: $darkmode-text-color;
     }
     #contact-number {
-        color: orange;
+        color: $darkmode-text-color;
     }
 }
 
 .darkmode {
     .active {
-        color: orange;
+        color: $darkmode-text-color;
     }
 }
 
