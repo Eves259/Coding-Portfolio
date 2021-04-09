@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -14,11 +14,39 @@
     
     <div class="navbar">
         <button id="switchToDarkMode" onclick="dark()">Switch Colors</button>
-        <a href="../index.html">Home</a>
-        <a href="../html/resume.html">Resume</a>
-        <a href="../html/gallery.html">Gallery</a>
-        <a class="active" href="../html/about me.html">About Me</a>
+        <button id="nav" onclick="window.location.href='../index.html';">Home</button>
+        <button id="nav" onclick="window.location.href='../html/resume.html';">Resume</button>
+        <button id="nav" onclick="window.location.href='../html/gallery.html';">Gallery</button>
+        <button id="nav-active" onclick="window.location.href='../html/about me.html';">About Me</button>
     </div>
+
+    <div class="piano">
+        <div data-note="C" class="white-key key"></div>
+        <div data-note="Db" class="black-key key"></div>
+        <div data-note="D" class="white-key key"></div>
+        <div data-note="Eb" class="black-key key"></div>
+        <div data-note="E" class="white-key key"></div>
+        <div data-note="F" class="white-key key"></div>
+        <div data-note="Gb" class="black-key key"></div>
+        <div data-note="G" class="white-key key"></div>
+        <div data-note="Ab" class="black-key key"></div>
+        <div data-note="A" class="white-key key"></div>
+        <div data-note="Bb" class="black-key key"></div>
+        <div data-note="B" class="white-key key"></div>
+        </div>
+    
+        <audio id="C" src="../audio/notes_C.mp3"></audio>
+        <audio id="Db" src="../audio/notes_Db.mp3"></audio>
+        <audio id="D" src="../audio/notes_D.mp3"></audio>
+        <audio id="Eb" src="../audio/notes_Eb.mp3"></audio>
+        <audio id="E" src="../audio/notes_E.mp3"></audio>
+        <audio id="F" src="../audio/notes_F.mp3"></audio>
+        <audio id="Gb" src="../audio/notes_Gb.mp3"></audio>
+        <audio id="G" src="../audio/notes_G.mp3"></audio>
+        <audio id="Ab" src="../audio/notes_Ab.mp3"></audio>
+        <audio id="A" src="../audio/notes_A.mp3"></audio>
+        <audio id="Bb" src="../audio/notes_Bb.mp3"></audio>
+        <audio id="B" src="../audio/notes_B.mp3"></audio>
     
     <div class="footer">
         <h2 id="footer-text">Contact Info/Github</h2>
@@ -27,6 +55,6 @@
         <h3 id="contact">Github: <a id="contact-link" href="https://github.com/">https://github.com/</a></h3>
     </div>
 
-<script src="../script.js"></script>
+<script src="../js/piano.js"></script>
 </body>
 </html>
