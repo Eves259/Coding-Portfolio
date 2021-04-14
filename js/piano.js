@@ -37,3 +37,17 @@ function playNote(key) {
     key.classList.remove('active'); //This removes the active class when the key is no longer being pressed
     });
 };
+
+//Password
+function password() {
+    var code = document.getElementById("secretCode");
+    if (code.type === "password") {
+        code.type="text";   
+    }else{
+    code.type = "password";
+    }
+}
+
+function onSubmit() {
+if (document.getElementById('secretCode').value == 'HORIZON') {window.location.href='tony.html'; }else{ alert('Try again. Hint: A type of dream done during the day. Type in all caps with no spaces :)'); }
+}

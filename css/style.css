@@ -49,8 +49,16 @@ body {
   font-family: font;
 }
 
+#nav:hover, #nav-active:hover {
+  color: #3872ec;
+}
+
 #nav-active {
   color: #3872ec;
+}
+
+#nav-active:hover {
+  color: white;
 }
 
 #contact, #contact-number, #contact-link {
@@ -79,8 +87,8 @@ body {
   border: white 0.3rem solid;
   width: 50rem;
   height: 45rem;
-  -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
-          box-shadow: #28ff5e 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #28ff5e 0.1rem 0rem 2rem;
+          box-shadow: #28ff5e 0.1rem 0rem 2rem;
 }
 
 #logo-2 {
@@ -106,15 +114,15 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-color: #28ff5e;
-  -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
-          box-shadow: #28ff5e 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #28ff5e 0.1rem 0rem 2rem;
+          box-shadow: #28ff5e 0.1rem 0rem 2rem;
   border: white 0.3rem solid;
 }
 
 .footer {
   background-color: #28ff5e;
-  -webkit-box-shadow: #28ff5e 0.3rem 0rem 1rem;
-          box-shadow: #28ff5e 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #28ff5e 0.1rem 0rem 2rem;
+          box-shadow: #28ff5e 0.1rem 0rem 2rem;
   border: white 0.3rem solid;
 }
 
@@ -161,21 +169,29 @@ body {
 
 .darkmode .navbar {
   background-color: #713dae;
-  -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
-          box-shadow: #713dae 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #713dae 0.1rem 0rem 2rem;
+          box-shadow: #713dae 0.1rem 0rem 2rem;
 }
 
 .darkmode #nav, .darkmode #nav-active {
   color: white;
 }
 
+.darkmode #nav:hover, .darkmode #nav-active:hover {
+  color: #D30F2C;
+}
+
 .darkmode #nav-active {
   color: #D30F2C;
 }
 
+.darkmode #nav-active:hover {
+  color: white;
+}
+
 .darkmode .slideShow .overview a #slide, .darkmode .slideShow .overview a #logo {
-  -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
-          box-shadow: #713dae 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #713dae 0.1rem 0rem 2rem;
+          box-shadow: #713dae 0.1rem 0rem 2rem;
 }
 
 .darkmode .slideShow .overview a #logo {
@@ -187,14 +203,14 @@ body {
   border: white 0.3rem solid;
   width: 50rem;
   height: 45rem;
-  -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
-          box-shadow: #713dae 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #713dae 0.1rem 0rem 2rem;
+          box-shadow: #713dae 0.1rem 0rem 2rem;
 }
 
 .darkmode .footer {
   background-color: #713dae;
-  -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
-          box-shadow: #713dae 0.3rem 0rem 1rem;
+  -webkit-box-shadow: #713dae 0.1rem 0rem 2rem;
+          box-shadow: #713dae 0.1rem 0rem 2rem;
 }
 
 .darkmode #footer-text {
@@ -270,6 +286,36 @@ body {
 }
 
 /*Gallery End*/
+/*Resume*/
+/*Resume End*/
+/*About me*/
+.about-me {
+  text-align: center;
+  color: white;
+}
+
+.about-me #hello {
+  font-size: 3rem;
+}
+
+.about-me #AM-text {
+  font-size: 2rem;
+}
+
+.about-me #AM-img {
+  width: 10rem;
+  border: white 0.3rem solid;
+  -webkit-box-shadow: #28ff5e 0.1rem 0rem 2rem;
+          box-shadow: #28ff5e 0.1rem 0rem 2rem;
+}
+
+#hobbies {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/*About me End*/
 /*Piano*/
 .piano {
   display: -webkit-box;

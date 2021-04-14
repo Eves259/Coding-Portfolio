@@ -5,8 +5,8 @@ $darkmode-text-color: #D30F2C;
 $nav-text-color: #3872ec;
 $footer-text-color: #3872ec;
 $text-shadow: rgba(191, 191, 240, 0.253)  0.3rem 0rem 1rem;
-$box-shadow: #28ff5e 0.3rem 0rem 1rem;
-$darkmode-box-shadow: #713dae 0.3rem 0rem 1rem;
+$box-shadow: #28ff5e 0.1rem 0rem 2rem;
+$darkmode-box-shadow: #713dae 0.1rem 0rem 2rem;
 $border: white .3rem solid;
 
 *, *::before, *::after {
@@ -57,11 +57,17 @@ body {
     outline: $border;
     cursor: pointer;
     font-family: font;
+    &:hover {
+        color: $nav-text-color;
+    }
 }
 
 #nav-active {
     @extend #nav;
     color: $nav-text-color;
+    &:hover {
+        color: $text-color;
+    }
 }
 
 #contact {
@@ -171,9 +177,15 @@ body {
     }
     #nav {
         color: $text-color;
+        &:hover {
+            color: $darkmode-text-color;
+        }
     }
     #nav-active {
         color: $darkmode-text-color;
+        &:hover {
+            color: $text-color;
+        }
     }
 }
 
@@ -274,6 +286,34 @@ a
 }
 
 /*Gallery End*/
+
+/*Resume*/
+
+/*Resume End*/
+
+/*About me*/
+.about-me {
+    text-align: center;
+    color: $text-color;
+    #hello {
+        font-size: 3rem;
+    }
+    #AM-text {
+        font-size: 2rem;
+    }
+    #AM-img {
+        width: 10rem;
+        border: $border;
+        box-shadow: $box-shadow;
+    }
+}
+
+#hobbies {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+/*About me End*/
 
 
 /*Piano*/
