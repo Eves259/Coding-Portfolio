@@ -38,16 +38,47 @@ function playNote(key) {
     });
 };
 
+//Game
+$('#b1').click(function () {
+    $('#card1').toggle(1000);
+    $('#card4').toggle(1000);
+});
+
+$('#b2').click(function () {
+    $('#card2').toggle(1000);
+    $('#card3').toggle(1000);
+    $('#card4').toggle(1000);
+});
+
+$('#b3').click(function () {
+    $('#card1').toggle(1000);
+    $('#card3').toggle(1000);
+});
+
+$('#b4').click(function () {
+    $('#card1').toggle(1000);
+    $('#card2').toggle(1000);
+});
+
 //Password
 function password() {
     var code = document.getElementById("secretCode");
     if (code.type === "password") {
         code.type="text";   
-    }else{
+    } else {
     code.type = "password";
     }
 }
 
 function onSubmit() {
-if (document.getElementById('secretCode').value == 'HORIZON') {window.location.href='tony.html'; }else{ alert('Try again. Hint: A type of dream done during the day. Type in all caps with no spaces :)'); }
+if (document.getElementById('secretCode').value == 'HORIZON') {
+    $('#codeSubmit').css('border', 'solid #0BA674 .1rem');
+    window.location.href='tony.html';
+} else { ;
+    alert('Try again. Hint: You see it twice a day');
+    $('#codeSubmit').css('border', 'solid red .1rem'); //Changes the border color to red if the password is entered incorrectly
+    setTimeout(function() {
+    $('#codeSubmit').css('border', 'solid white .1rem');
+    }, 300);
+}
 }
