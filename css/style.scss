@@ -60,7 +60,7 @@ body {
     font-family: font;
     &:hover {
         color: $nav-text-color;
-        text-shadow: $text-shadow;
+        text-shadow: #5c8cd3 0.3rem 0rem 1rem;
     }
 }
 
@@ -310,7 +310,11 @@ a
 /*Gallery End*/
 
 /*Resume*/
-
+#resume {
+    border: solid white .3rem;
+    display: block;
+    margin: auto;
+}
 /*Resume End*/
 
 /*About me*/
@@ -324,7 +328,8 @@ a
         font-size: 2rem;
     }
     #AM-img {
-        width: 10rem;
+        width: 50rem;
+        height: 40rem;
         border: $border;
         box-shadow: $box-shadow;
     }
@@ -336,6 +341,79 @@ a
     text-align: center;
 }
 
+.game-style {
+    background-color: #713dae;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+#game-button-1 {
+    display: block;
+    margin: auto;
+}
+
+#game-button-2 {
+    display: block;
+    margin: auto;
+}
+
+#game-button-3 {
+    display: block;
+    margin: auto;
+}
+
+#game-button-4 {
+    display: block;
+    margin: auto;
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 2s;
+    background-color: green;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#drag-and-drop {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+.tony-drag-and-drop {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#tony-sit {
+    border: $border;
+}
+
+#hat {
+    border: $border;
+}
+
+#tony-sit, #hat {
+    width: 25rem;
+    height: 20rem;
+}
+
+.passwordSetup {
+    display: flex;
+    justify-content: center;
+}
+
 fieldset {
     width: fit-content;
     border: none;
@@ -345,8 +423,6 @@ fieldset {
 }
 
 #codeSubmit {
-    display: block;
-    margin: auto;
     background-color: #1352b1;
     border: solid white .1rem;
     color: $text-color;

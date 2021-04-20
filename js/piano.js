@@ -39,26 +39,45 @@ function playNote(key) {
 };
 
 //Game
-$('#b1').click(function () {
-    $('#card1').toggle(1000);
-    $('#card4').toggle(1000);
+$('#game-button-1').click(function () {
+    //$('#game-button-1').toggle(1000);
+    $('#game-button-1').toggleClass('rotate');
+    //$('#game-button-4').toggle(1000);
+    $('#game-button-2').toggleClass('rotate'); //game-button-4
 });
 
-$('#b2').click(function () {
-    $('#card2').toggle(1000);
-    $('#card3').toggle(1000);
-    $('#card4').toggle(1000);
+$('#game-button-2').click(function () {
+    $('#game-button-2').toggleClass('rotate');;
+    $('#game-button-3').toggleClass('rotate');
+    $('#game-button-4').toggleClass('rotate');
 });
 
-$('#b3').click(function () {
-    $('#card1').toggle(1000);
-    $('#card3').toggle(1000);
+$('#game-button-3').click(function () {
+    $('#game-button-1').toggleClass('rotate'); 
+    $('#game-button-2').toggleClass('rotate'); //new
+    $('#game-button-3').toggleClass('rotate');
 });
 
-$('#b4').click(function () {
-    $('#card1').toggle(1000);
-    $('#card2').toggle(1000);
+$('#game-button-4').click(function () {
+    $('#game-button-3').toggleClass('rotate'); //game-button-1
+    $('#game-button-4').toggleClass('rotate'); //game-button-2
 });
+
+//Drag and drop
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("img", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("img");
+    ev.target.appendChild(document.getElementById(data));
+    $('#tony-sit').attr('src', '../images/tony-hat.jpg');
+}
 
 //Password
 function password() {

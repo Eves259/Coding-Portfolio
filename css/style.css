@@ -51,7 +51,7 @@ body {
 
 #nav:hover, #nav-active:hover {
   color: #3872ec;
-  text-shadow: #1352b1 0.3rem 0rem 1rem;
+  text-shadow: #5c8cd3 0.3rem 0rem 1rem;
 }
 
 #nav-active {
@@ -304,6 +304,12 @@ body {
 
 /*Gallery End*/
 /*Resume*/
+#resume {
+  border: solid white .3rem;
+  display: block;
+  margin: auto;
+}
+
 /*Resume End*/
 /*About me*/
 .about-me {
@@ -320,7 +326,8 @@ body {
 }
 
 .about-me #AM-img {
-  width: 10rem;
+  width: 50rem;
+  height: 40rem;
   border: white 0.3rem solid;
   -webkit-box-shadow: #1352b1 0.1rem 0rem 2rem;
           box-shadow: #1352b1 0.1rem 0rem 2rem;
@@ -330,6 +337,102 @@ body {
   color: white;
   font-size: 3rem;
   text-align: center;
+}
+
+.game-style {
+  background-color: #713dae;
+  color: white;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+}
+
+#game-button-1 {
+  display: block;
+  margin: auto;
+}
+
+#game-button-2 {
+  display: block;
+  margin: auto;
+}
+
+#game-button-3 {
+  display: block;
+  margin: auto;
+}
+
+#game-button-4 {
+  display: block;
+  margin: auto;
+}
+
+.rotate {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  background-color: green;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#drag-and-drop {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+
+.tony-drag-and-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+#tony-sit {
+  border: white 0.3rem solid;
+}
+
+#hat {
+  border: white 0.3rem solid;
+}
+
+#tony-sit, #hat {
+  width: 25rem;
+  height: 20rem;
+}
+
+.passwordSetup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 fieldset {
@@ -343,8 +446,6 @@ fieldset {
 }
 
 #codeSubmit {
-  display: block;
-  margin: auto;
   background-color: #1352b1;
   border: solid white .1rem;
   color: white;
