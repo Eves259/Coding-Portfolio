@@ -375,6 +375,20 @@ body {
   background-color: green;
 }
 
+#answer-1 {
+  display: none;
+  width: 0;
+  color: blue;
+  margin: auto;
+}
+
+#answer-2 {
+  display: none;
+  width: 0;
+  color: orange;
+  margin: auto;
+}
+
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -414,10 +428,6 @@ body {
 }
 
 #tony-sit {
-  border: white 0.3rem solid;
-}
-
-#hat {
   border: white 0.3rem solid;
 }
 

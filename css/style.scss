@@ -375,6 +375,20 @@ a
     background-color: green;
 }
 
+#answer-1 {
+    display: none;
+    width: 0;
+    color: blue;
+    margin: auto;
+}
+
+#answer-2 {
+    display: none;
+    width: 0;
+    color: orange;
+    margin: auto;
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -397,10 +411,6 @@ a
 }
 
 #tony-sit {
-    border: $border;
-}
-
-#hat {
     border: $border;
 }
 

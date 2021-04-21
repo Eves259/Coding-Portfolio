@@ -39,29 +39,41 @@ function playNote(key) {
 };
 
 //Game
-$('#game-button-1').click(function () {
-    //$('#game-button-1').toggle(1000);
-    $('#game-button-1').toggleClass('rotate');
-    //$('#game-button-4').toggle(1000);
-    $('#game-button-2').toggleClass('rotate'); //game-button-4
-});
-
-$('#game-button-2').click(function () {
-    $('#game-button-2').toggleClass('rotate');;
-    $('#game-button-3').toggleClass('rotate');
-    $('#game-button-4').toggleClass('rotate');
-});
-
-$('#game-button-3').click(function () {
-    $('#game-button-1').toggleClass('rotate'); 
-    $('#game-button-2').toggleClass('rotate'); //new
-    $('#game-button-3').toggleClass('rotate');
-});
-
-$('#game-button-4').click(function () {
-    $('#game-button-3').toggleClass('rotate'); //game-button-1
-    $('#game-button-4').toggleClass('rotate'); //game-button-2
-});
+    $('#game-button-1').click(function () {
+        //$('#game-button-1').toggle(1000);
+        $('#game-button-1').toggleClass('rotate');
+        //$('#game-button-4').toggle(1000);
+        $('#game-button-2').toggleClass('rotate');
+        if ($('#game-button-1').hasClass('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
+            $('#answer-1').css('display', 'block');
+        }
+    });
+    
+    $('#game-button-2').click(function () {
+        $('#game-button-2').toggleClass('rotate');
+        $('#game-button-3').toggleClass('rotate');
+        $('#game-button-4').toggleClass('rotate');
+        if ($('#game-button-1').hasClass('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
+            $('#answer-1').css('display', 'block');
+        }
+    });
+    
+    $('#game-button-3').click(function () {
+        $('#game-button-1').toggleClass('rotate'); 
+        $('#game-button-2').toggleClass('rotate');
+        $('#game-button-3').toggleClass('rotate');
+        if ($('#game-button-1').hasClass('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
+            $('#answer-1').css('display', 'block');
+        }
+    });
+    
+    $('#game-button-4').click(function () {
+        $('#game-button-3').toggleClass('rotate');
+        $('#game-button-4').toggleClass('rotate');
+        if ($('#game-button-1').hasClass('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
+            $('#answer-1').css('display', 'block');
+        }
+    });
 
 //Drag and drop
 function allowDrop(ev) {
@@ -77,6 +89,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("img");
     ev.target.appendChild(document.getElementById(data));
     $('#tony-sit').attr('src', '../images/tony-hat.jpg');
+    $('#answer-2').css('display', 'block');
 }
 
 //Password
