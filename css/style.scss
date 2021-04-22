@@ -296,7 +296,7 @@ a
 
 /*Gallery*/
 #website {
-    width: 32rem;
+    width: 40rem;
     border: $border;
 }
 
@@ -344,6 +344,12 @@ a
         border: $border;
         box-shadow: $box-shadow;
     }
+}
+
+.center-images {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
 #hobbies {

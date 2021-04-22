@@ -272,7 +272,7 @@ body {
 
 /*Gallery*/
 #website {
-  width: 32rem;
+  width: 40rem;
   border: white 0.3rem solid;
 }
 
@@ -335,6 +335,16 @@ body {
   border: white 0.3rem solid;
   -webkit-box-shadow: #1352b1 0.1rem 0rem 2rem;
           box-shadow: #1352b1 0.1rem 0rem 2rem;
+}
+
+.center-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
 }
 
 #hobbies {
