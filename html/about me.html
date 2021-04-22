@@ -42,6 +42,7 @@
 
     <h1 id="hobbies">Music</h1>
 
+    <div class="music">
     <div class="piano">
         <div data-note="C" class="white-key key"></div>
         <div data-note="Db" class="black-key key"></div>
@@ -70,13 +71,24 @@
         <audio id="Bb" src="../audio/notes_Bb.mp3"></audio>
         <audio id="B" src="../audio/notes_B.mp3"></audio>
 
+        <img id="guitar" src="../images/guitar.jpg">
+        </div>
+
+        <div class="answers">
+        <p id="answer-3">R</p>
+        <p id="answer-4">I</p>
+        <p id="answer-5">Z</p>
+        <p id="answer-6">O</p>
+        <p id="answer-7">N</p>
+        </div>
+
         <h1 id="hobbies">Games</h1>
 
         <div class="game">
-        <div id="block"><button class="game-style" id="game-button-1">-</button></div>
-        <div id="block"><button class="game-style" id="game-button-2">-</button></div>
-        <div id="block"><button class="game-style" id="game-button-3">-</button></div>
-        <div id="block"><button class="game-style" id="game-button-4">-</button></div>
+        <div id="block"><button class="game-style" id="game-button-1"></button></div>
+        <div id="block"><button class="game-style" id="game-button-2"></button></div>
+        <div id="block"><button class="game-style" id="game-button-3"></button></div>
+        <div id="block"><button class="game-style" id="game-button-4"></button></div>
         </div><br><br>
 
         <p id="answer-1">H</p>
@@ -91,7 +103,7 @@
         <br>
 
         <div class="tony-drag-and-drop">
-        <div id="tony" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="tony-sit" src="../images/Tony Goofy.jpg"></div>
+        <div id="tony" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="tony-gate" src="../images/Tony gate.jpg"></div>
 
         <div id="tony" draggable="true" ondragstart="drag(event)"><img id="hat" src="../images/hat.png"></div>
         </div>

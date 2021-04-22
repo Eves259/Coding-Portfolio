@@ -1,14 +1,16 @@
 $background-color: #28ff5e;
-$darkmode-background-color: #713dae;
 $text-color: white;
-$darkmode-text-color: #D30F2C;
 $nav-text-color: #3872ec;
 $footer-text-color: #3872ec;
 $text-shadow: #1352b1 0.3rem 0rem 1rem;
 $box-shadow: #1352b1 0.1rem 0rem 2rem;
-$darkmode-box-shadow: #713dae 0.1rem 0rem 2rem;
 $border: white .3rem solid;
 $outline: solid #0BA674 .3rem;
+
+$darkmode-background-color: #713dae;
+$darkmode-text-color: #D30F2C;
+$darkmode-text-shadow: #713dae 0.3rem 0rem 1rem;
+$darkmode-box-shadow: #713dae 0.3rem 0rem 1rem;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -117,7 +119,7 @@ body {
     color: $text-color;
     text-align: center;
     max-width: 50rem;
-    text-shadow: #1352b1 0.3rem 0rem 1rem;
+    text-shadow: $text-shadow;
     font-size: 2.5rem;
 }
 /*End of Slideshow IDs*/
@@ -157,7 +159,7 @@ body {
     margin-bottom: auto;
     font-size: 4rem;
     user-select: none;
-    text-shadow: #1352b1 0.3rem 0rem 1rem;
+    text-shadow: $text-shadow;
 }
 
 .next {
@@ -240,6 +242,15 @@ a
 }
 
 .darkmode {
+.previous {
+    text-shadow: $darkmode-text-shadow;
+}
+.next {
+    @extend .previous;
+}
+}
+
+.darkmode {
     .footer {
     background-color: $darkmode-background-color;
     box-shadow: $darkmode-box-shadow;
@@ -286,7 +297,7 @@ a
 /*Gallery*/
 #website {
     width: 32rem;
-    border: solid .3rem white;
+    border: $border;
 }
 
 .gallery-container-one {
@@ -311,7 +322,7 @@ a
 
 /*Resume*/
 #resume {
-    border: solid white .3rem;
+    border: $border;
     display: block;
     margin: auto;
 }
@@ -336,14 +347,27 @@ a
 }
 
 #hobbies {
-    color: white;
+    color: $text-color;
     font-size: 3rem;
     text-align: center;
 }
 
+.music {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#guitar {
+    width: 30rem;
+    height: 40rem;
+    border: $border;
+    box-shadow: $box-shadow;
+    margin-right: auto;
+}
+
 .game-style {
-    background-color: #713dae;
-    color: white;
+    background-color: #28ff5e;
+    color: $text-color;
     width: 5rem;
     height: 5rem;
     font-size: 2rem;
@@ -352,41 +376,77 @@ a
 #game-button-1 {
     display: block;
     margin: auto;
+    border: $border;
+    outline: none;
+    box-shadow: 0rem 0rem 0.5rem whitesmoke;
 }
 
 #game-button-2 {
-    display: block;
-    margin: auto;
+    @extend #game-button-1;
 }
 
 #game-button-3 {
-    display: block;
-    margin: auto;
+    @extend #game-button-1;
 }
 
 #game-button-4 {
-    display: block;
-    margin: auto;
+    @extend #game-button-1;
 }
 
 .rotate {
     animation-name: rotate;
     animation-duration: 2s;
-    background-color: green;
+    background-color: #1352b1;
+}
+
+.answers {
+    text-align: center;
+    width: 0;
+    margin: auto;
+    font-size: 2rem;
 }
 
 #answer-1 {
+    color: #1352b1;
     display: none;
+    text-align: center;
     width: 0;
-    color: blue;
     margin: auto;
+    font-size: 2rem;
 }
 
 #answer-2 {
-    display: none;
-    width: 0;
     color: orange;
+    text-align: center;
+    width: 0;
+    display: none;
     margin: auto;
+    font-size: 2rem;
+}
+
+#answer-3 {
+    color: #1352b1;
+    display: none;
+}
+
+#answer-4 {
+    color: orange;
+    display: none;
+}
+
+#answer-5 {
+    color: #1352b1;
+    display: none;
+}
+
+#answer-6 {
+    color: orange;
+    display: none;
+}
+
+#answer-7 {
+    color: #1352b1;
+    display: none;
 }
 
 @keyframes rotate {
@@ -400,7 +460,7 @@ a
 
 #drag-and-drop {
     text-align: center;
-    color: white;
+    color: $text-color;
     text-decoration: underline;
 }
 
@@ -410,11 +470,16 @@ a
     gap: 3rem;
 }
 
-#tony-sit {
+#tony-gate {
     border: $border;
 }
 
-#tony-sit, #hat {
+#tony-gate {
+    width: 28rem;
+    height: 25rem;
+}
+
+#hat {
     width: 25rem;
     height: 20rem;
 }
@@ -434,12 +499,54 @@ fieldset {
 
 #codeSubmit {
     background-color: #1352b1;
-    border: solid white .1rem;
+    border:$border;
     color: $text-color;
     font-family: font;
     font-size: 1.5rem;
     outline: none;
 }
+
+/*About me Darkmode*/
+.darkmode
+.about-me
+#AM-img {
+    box-shadow: $darkmode-box-shadow;
+}
+
+.darkmode {
+    #guitar {
+        box-shadow: $darkmode-box-shadow;
+    }
+}
+
+.darkmode {
+    .piano {
+        box-shadow: $darkmode-box-shadow;
+    }
+}
+
+.darkmode {
+    .game-style {
+        background-color: #713dae;
+    }
+    .rotate {
+        background-color: #D30F2C;
+    }
+    #answer-1 {
+        color: #D30F2C;
+    }
+    #answer-3 {
+        color: #D30F2C;
+    }
+    #answer-5 {
+        color: #D30F2C;
+    }
+    #answer-7 {
+        color: #D30F2C;
+    }
+}
+/*End of About me Darkmode*/
+
 /*About me End*/
 
 
@@ -456,6 +563,7 @@ $display: flex;
     width: fit-content;
     border: solid rgb(45, 45, 196) 1rem;
     margin: auto;
+    box-shadow: $box-shadow;
 }
 
 .white-key {

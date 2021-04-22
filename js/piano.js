@@ -31,20 +31,81 @@ document.addEventListener('keydown', function(e) { //finding the index of the ke
 function playNote(key) {
     const noteAudio = document.getElementById(key.dataset.note); //Checks dataset-note for the notes with matching ids
     noteAudio.currentTime = 0; //Restarts the file at the beginning and then replays it
-    noteAudio.play();
+    noteAudio.play();//Plays the audio
     key.classList.add('active'); //Adds the active class to the keys when they are pressed
     noteAudio.addEventListener('ended', function() {
     key.classList.remove('active'); //This removes the active class when the key is no longer being pressed
     });
 };
 
+//Password Reveal
+let keysPressed = {};
+
+//Answer 3
+document.addEventListener('keydown', function keyPressTest(event) {
+    keysPressed[event.key] = true;
+    if (keysPressed['x'] && keysPressed['v'] && keysPressed['n']) {
+        $('#answer-3').css('display', 'block');
+    }
+});
+
+document.addEventListener('keyup', function keyPressClear(event) {
+    delete keysPressed[event.key];
+});
+
+//Answer 4
+document.addEventListener('keydown', function keyPressTest(event) {
+    keysPressed[event.key] = true;
+    if (keysPressed['v'] && keysPressed['n'] && keysPressed['z']) {
+        $('#answer-4').css('display', 'block');
+    }
+});
+
+document.addEventListener('keyup', function keyPressClear(event) {
+    delete keysPressed[event.key];
+});
+
+//Answer 5
+document.addEventListener('keydown', function keyPressTest(event) {
+    keysPressed[event.key] = true;
+    if (keysPressed['n'] && keysPressed['z'] && keysPressed['c']) {
+        $('#answer-5').css('display', 'block');
+    }
+});
+
+document.addEventListener('keyup', function keyPressClear(event) {
+    delete keysPressed[event.key];
+});
+
+//Answer 6
+document.addEventListener('keydown', function keyPressTest(event) {
+    keysPressed[event.key] = true;
+    if (keysPressed['b'] && keysPressed['m'] && keysPressed['x']) {
+        $('#answer-6').css('display', 'block');
+    }
+});
+
+document.addEventListener('keyup', function keyPressClear(event) {
+    delete keysPressed[event.key];
+});
+
+//Answer 7
+document.addEventListener('keydown', function keyPressTest(event) {
+    keysPressed[event.key] = true;
+    if (keysPressed['z'] && keysPressed['c'] && keysPressed['b']) {
+        $('#answer-7').css('display', 'block');
+    }
+});
+
+document.addEventListener('keyup', function keyPressClear(event) {
+    delete keysPressed[event.key];
+});
+
 //Game
     $('#game-button-1').click(function () {
-        //$('#game-button-1').toggle(1000);
         $('#game-button-1').toggleClass('rotate');
-        //$('#game-button-4').toggle(1000);
         $('#game-button-2').toggleClass('rotate');
-        if ($('#game-button-1').hasClass('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
+        if ($('#game-button-1').has('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
             $('#answer-1').css('display', 'block');
         }
     });
@@ -88,7 +149,7 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("img");
     ev.target.appendChild(document.getElementById(data));
-    $('#tony-sit').attr('src', '../images/tony-hat.jpg');
+    $('#tony-gate').attr('src', '../images/tony-hat.jpg');
     $('#answer-2').css('display', 'block');
 }
 
