@@ -1,3 +1,4 @@
+/*Standard variables*/
 $background-color: #28ff5e;
 $text-color: white;
 $nav-text-color: #3872ec;
@@ -7,11 +8,14 @@ $box-shadow: #1352b1 0.1rem 0rem 2rem;
 $border: white .3rem solid;
 $outline: solid #0BA674 .3rem;
 
+/*Darkmode variables*/
 $darkmode-background-color: #713dae;
 $darkmode-text-color: #D30F2C;
-$darkmode-text-shadow: #713dae 0.3rem 0rem 1rem;
+$darkmode-text-shadow: #ae7ee6 0.3rem 0rem 1rem;
 $darkmode-box-shadow: #713dae 0.3rem 0rem 1rem;
 
+
+/*Applies to all pages*/
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -25,16 +29,29 @@ body {
     margin: 0;
 }
 
+/*Classes*/
+.universalNavbar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    border: $border;
+}
+
+.universalFooter {
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    border: $border;
+}
+
 /*IDs*/
 #heading {
     text-align: center;
     font-size: 4.5rem;
     color: $text-color;
     text-shadow: $text-shadow;
-}
-
-#header-img {
-    width: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 #switchToDarkMode {
@@ -98,47 +115,9 @@ body {
     text-align: center;
     font-size: 2rem;
 }
+/*Applies to all End*/
 
-/*Slideshow IDS*/
-#slide {
-    border: $border;
-    width: 50rem;
-    height: 45rem;
-    box-shadow: $box-shadow;
-}
 
-#logo {
-    @extend #slide;
-}
-
-#logo-2 {
-    display: none;
-}
-
-#overview-text {
-    color: $text-color;
-    text-align: center;
-    max-width: 50rem;
-    text-shadow: $text-shadow;
-    font-size: 2.5rem;
-}
-/*End of Slideshow IDs*/
-/*End of IDs*/
-
-/*Classes*/
-.navbar {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: $background-color;
-    box-shadow: $box-shadow;
-    border: $border;
-}
-
-.footer {
-    background-color: $background-color;
-    box-shadow: $box-shadow;
-    border: $border;
-}
 
 /*Slideshow Classes*/
 .slideShow {
@@ -160,6 +139,7 @@ body {
     font-size: 4rem;
     user-select: none;
     text-shadow: $text-shadow;
+    text-decoration: none;
 }
 
 .next {
@@ -167,137 +147,44 @@ body {
 }
 /*End of Slideshow Classes*/
 
-/*Darkmode*/
-.darkmode {
-    background-color: $darkmode-background-color;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23271a87'/%3E%3Cstop offset='1' stop-color='%23271a87' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23271a87'/%3E%3Cstop offset='1' stop-color='%23271a87' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23713dae'/%3E%3Cstop offset='1' stop-color='%23713dae' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-}
-
-.darkmode
-.header
-#heading {
-    text-shadow: none;
-
-}
-
-.darkmode
-.overview
-#overview-text {
-    text-shadow: none;
-}
-
-.darkmode {
-    .navbar {
-    background-color: $darkmode-background-color;
-    box-shadow: $darkmode-box-shadow;
-    }
-    #switchToDarkMode {
-        text-shadow: none;
-    }
-    #nav {
-        color: $text-color;
-        text-shadow: none;
-        &:hover {
-            color: $darkmode-text-color;
-        }
-    }
-    #nav-active {
-        color: $darkmode-text-color;
-        text-shadow: none;
-        &:hover {
-            color: $text-color;
-        }
-    }
-}
-
-.darkmode
-.slideShow
-.overview
-a
+/*Slideshow IDS*/
 #slide {
-    box-shadow: $darkmode-box-shadow;
-}
-
-.darkmode
-.slideShow
-.overview
-a
-#logo {
-    display: none;
-}
-
-.darkmode
-.slideShow
-.overview
-a
-#logo-2 {
-    display: block;
     border: $border;
     width: 50rem;
     height: 45rem;
-    box-shadow: $darkmode-box-shadow;
+    box-shadow: $box-shadow;
 }
 
-.darkmode {
-.previous {
-    text-shadow: $darkmode-text-shadow;
-}
-.next {
-    @extend .previous;
-}
-}
-
-.darkmode {
-    .footer {
-    background-color: $darkmode-background-color;
-    box-shadow: $darkmode-box-shadow;
-    }
-    #footer-text {
-        color: $text-color;
-    }
-    #contact-link {
-        color: $darkmode-text-color;
-    }
-    #contact-number {
-        color: $darkmode-text-color;
-    }
+#slide-2 {
+    @extend #slide;
+    border-left: solid #1352b1 0.3rem;
+    border-right: solid #1352b1 0.3rem;
+    border-top: solid #28ff5e 0.3rem;
+    border-bottom: solid #28ff5e 0.3rem;
 }
 
-.darkmode {
-    .active {
-        color: $darkmode-text-color;
-    }
+#logo {
+    @extend #slide;
 }
 
-
-/*End of Darkmode*/
-
-
-/*Animations*/
-
-@keyframes switchSlide {
-    0% {
-        opacity: 0%;
-    }
+#logo-2 {
+    display: none;
 }
 
-/*End of Animations*/
-
-
-/*Fonts*/
-@font-face {
-    src: url('../fonts/PhantomRush.ttf');
-    font-family: font;
+#overview-text {
+    color: $text-color;
+    text-align: center;
+    max-width: 50rem;
+    text-shadow: $text-shadow;
+    font-size: 2.5rem;
 }
-
+/*End of Slideshow IDs*/
 
 /*Gallery*/
 #website {
-    width: 40rem;
+    width: 50rem;
     border: $border;
+    box-shadow: $box-shadow;
 }
 
 .gallery-container-one {
@@ -317,16 +204,111 @@ a
     justify-content: center;
     gap: 5rem;
 }
-
 /*Gallery End*/
+
+
 
 /*Resume*/
 #resume {
-    border: $border;
+    border-left: solid #1352b1 0.3rem;
+    border-right: solid #1352b1 0.3rem;
+    border-top: solid #28ff5e 0.3rem;
+    border-bottom: solid #28ff5e 0.3rem;
+    display: block;
+    margin: auto;
+    box-shadow: $box-shadow;
+}
+
+.table-center {
+    display: flex;
+    justify-content: center;
+    color: $text-color;
+    font-size: 1.75rem;
+}
+
+.skill-center {
     display: block;
     margin: auto;
 }
+
+#skills {
+    text-align: center;
+    color: $text-color;
+    font-size: 3rem;
+}
+
+#html {
+    text-align: center;
+    color: $text-color;
+    font-size: 3rem;
+}
+
+#coding-skills {
+    color: $text-color;
+    text-align: center;
+    font-size: 3rem;
+}
+
+table td{
+    border: $border;
+    text-align: center;
+    border-spacing: 2rem collapse;
+    border-collapse: separate;
+    padding: 1.5rem;
+}
+
+#left {
+    text-align: left;
+}
+
+#sun {
+    display: block;
+    margin: auto;
+    width: 18rem;
+    height: 18rem;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: 0.1rem 0rem 5rem yellow;
+}
+
+.active-sun {
+    animation-name: bright;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#activate-sun {
+    display: block;
+    margin: auto;
+    outline: none;
+    border: $border;
+    color: $text-color;
+    background-color: #1352b1;
+    font-family: font;
+    font-size: 2rem;
+    box-shadow: $box-shadow;
+}
+
+#story {
+    text-align: center;
+    color: $text-color;
+    font-size: 1.25rem;
+}
+
+#story-button {
+    display: block;
+    margin: auto;
+    outline: none;
+    border: $border;
+    color: $text-color;
+    background-color: #0BA674;
+    font-family: font;
+    font-size: 2rem;
+    box-shadow: 0.1rem 0rem 5rem #0BA674;
+}
 /*Resume End*/
+
+
 
 /*About me*/
 .about-me {
@@ -362,6 +344,50 @@ a
     display: flex;
     justify-content: space-evenly;
 }
+
+
+
+/*Piano*/
+$white-keys: white;
+$black-keys: rgb(45, 45, 196);
+$white-active: #CCC;
+$black-active: #28ff5e;
+$blackkeys-darkmode: #D30F2C;
+$display: flex;
+
+.piano {
+    display: $display;
+    width: fit-content;
+    border: solid rgb(45, 45, 196) 1rem;
+    margin: auto;
+    box-shadow: $box-shadow;
+}
+
+.white-key {
+    width: 6.25rem;
+    height: 25rem;
+    background-color: $white-keys;
+    border: .1rem rgb(45, 45, 196) solid;
+}
+
+.white-key.active {
+    background-color: $white-active;
+}
+
+.black-key.active {
+    background-color: $black-active;
+}
+
+.black-key {
+    width: 3.75rem;
+    height: 15rem;
+    background-color: $black-keys;
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    z-index: 2;
+}
+/*End of piano*/
+
 
 #guitar {
     width: 30rem;
@@ -455,16 +481,7 @@ a
     display: none;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#drag-and-drop {
+#instrustructions {
     text-align: center;
     color: $text-color;
     text-decoration: underline;
@@ -483,6 +500,7 @@ a
 #tony-gate {
     width: 28rem;
     height: 25rem;
+    box-shadow: $box-shadow;
 }
 
 #hat {
@@ -493,6 +511,8 @@ a
 .passwordSetup {
     display: flex;
     justify-content: center;
+    box-shadow: $box-shadow;
+    gap: 1.25rem;
 }
 
 fieldset {
@@ -510,7 +530,191 @@ fieldset {
     font-family: font;
     font-size: 1.5rem;
     outline: none;
+    box-shadow: $box-shadow;
 }
+/*About me End*/
+
+
+
+
+/*Darkmode*/
+.darkmode {
+    background-color: $darkmode-background-color;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23271a87'/%3E%3Cstop offset='1' stop-color='%23271a87' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23271a87'/%3E%3Cstop offset='1' stop-color='%23271a87' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23713dae'/%3E%3Cstop offset='1' stop-color='%23713dae' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23061752'/%3E%3Cstop offset='1' stop-color='%23061752' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.darkmode
+.header
+#heading {
+    text-shadow: $darkmode-text-shadow;
+}
+
+.darkmode {
+    .universalNavbar {
+    background-color: $darkmode-background-color;
+    box-shadow: $darkmode-box-shadow;
+    }
+    #switchToDarkMode {
+        text-shadow: none;
+    }
+    #nav {
+        color: $text-color;
+        text-shadow: none;
+        &:hover {
+            color: $darkmode-text-color;
+        }
+    }
+    #nav-active {
+        color: $darkmode-text-color;
+        text-shadow: none;
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+.darkmode {
+    .universalFooter {
+    background-color: $darkmode-background-color;
+    box-shadow: $darkmode-box-shadow;
+    }
+    #footer-text {
+        color: $text-color;
+    }
+    #contact-link {
+        color: $darkmode-text-color;
+    }
+    #contact-number {
+        color: $darkmode-text-color;
+    }
+}
+
+.darkmode {
+    .active {
+        color: $darkmode-text-color;
+    }
+}
+
+
+
+/*Home page Darkmode*/
+.darkmode
+.overview
+#overview-text {
+    text-shadow: $darkmode-text-shadow;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#slide {
+    box-shadow: $darkmode-box-shadow;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#slide-2 {
+    border-left: solid #713dae 0.3rem;
+    border-right: solid #713dae 0.3rem;
+    border-top: solid #D30F2C 0.3rem;
+    border-bottom: solid #D30F2C 0.3rem;
+    box-shadow: $darkmode-box-shadow;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#logo {
+    display: none;
+}
+
+.darkmode
+.slideShow
+.overview
+a
+#logo-2 {
+    display: block;
+    border: $border;
+    width: 50rem;
+    height: 45rem;
+    box-shadow: $darkmode-box-shadow;
+}
+
+.darkmode {
+.previous {
+    text-shadow: $darkmode-text-shadow;
+    &:hover {
+        color: #D30F2C;
+    }
+}
+.next {
+    @extend .previous;
+}
+}
+/*End of home page Darkmode*/
+
+
+
+/*Resume Darkmode*/
+.darkmode {
+    #resume {
+        box-shadow: $darkmode-box-shadow;
+        border-left: solid #713dae 0.3rem;
+        border-right: solid #713dae 0.3rem;
+        border-top: solid #D30F2C 0.3rem;
+        border-bottom: solid #D30F2C 0.3rem;
+    }
+    #sun {
+        background-color: $text-color;
+        box-shadow: 0.1rem 0rem 5rem whitesmoke;
+    }
+    #activate-sun {
+        background-color: #D30F2C;
+        box-shadow: $darkmode-box-shadow;
+    }
+    #story-button {
+        background-color: orange;
+        box-shadow: $darkmode-box-shadow;
+    }
+}
+/*Resume Darkmode End*/
+
+
+
+/*Gallery Darkmode*/
+.gallery-container-one {
+    a {
+        #website {
+            box-shadow: $darkmode-box-shadow;
+        }
+    }
+}
+
+.gallery-container-two {
+    a {
+        #website {
+            box-shadow: $darkmode-box-shadow;
+        }
+    }
+}
+
+.gallery-container-three {
+    a {
+        #website {
+            box-shadow: $darkmode-box-shadow;
+        }
+    }
+}
+/*Gallery Darkmode*/
+
+
 
 /*About me Darkmode*/
 .darkmode
@@ -519,19 +723,36 @@ fieldset {
     box-shadow: $darkmode-box-shadow;
 }
 
+/*Piano darkmode*/
+.darkmode {
+    .piano {
+        border: solid $blackkeys-darkmode 1rem;
+    }
+    .black-key {
+        background-color: $blackkeys-darkmode;
+    }
+    .white-key {
+        border: .1rem #D30F2C solid;
+    }
+    .black-key.active {
+        background-color: #713dae;
+    }
+}
+/*End of darkmode piano*/
+
 .darkmode {
     #guitar {
         box-shadow: $darkmode-box-shadow;
     }
-}
 
-.darkmode {
+    #tony-gate {
+        box-shadow: $darkmode-box-shadow;
+    }
+
     .piano {
         box-shadow: $darkmode-box-shadow;
     }
-}
 
-.darkmode {
     .game-style {
         background-color: #713dae;
     }
@@ -550,63 +771,84 @@ fieldset {
     #answer-7 {
         color: #D30F2C;
     }
+
+    .passwordSetup {
+        box-shadow: $darkmode-box-shadow;
+    }
+
+    #codeSubmit {
+        box-shadow: $darkmode-box-shadow;
+        background-color: #D30F2C;
+    }
 }
 /*End of About me Darkmode*/
 
-/*About me End*/
+/*End of Darkmode*/
 
 
-/*Piano*/
-$white-keys: white;
-$black-keys: rgb(45, 45, 196);
-$white-active: #CCC;
-$black-active: #28ff5e;
-$blackkeys-darkmode: #D30F2C;
-$display: flex;
 
-.piano {
-    display: $display;
-    width: fit-content;
-    border: solid rgb(45, 45, 196) 1rem;
-    margin: auto;
-    box-shadow: $box-shadow;
-}
 
-.white-key {
-    width: 6.25rem;
-    height: 25rem;
-    background-color: $white-keys;
-    border: .1rem rgb(45, 45, 196) solid;
-}
+/*Animations*/
 
-.white-key.active {
-    background-color: $white-active;
-}
-
-.black-key.active {
-    background-color: $black-active;
-}
-
-.black-key {
-    width: 3.75rem;
-    height: 15rem;
-    background-color: $black-keys;
-    margin-left: -1.875rem;
-    margin-right: -1.875rem;
-    z-index: 2;
-}
-
-.darkmode {
-    .piano {
-        border: solid $blackkeys-darkmode 1rem;
+/*Home page Animation*/
+@keyframes switchSlide {
+    0% {
+        opacity: 0%;
     }
-    .black-key {
-        background-color: $blackkeys-darkmode;
+}
+/*End of home page animations*/
+
+/*Resume Animation*/
+@keyframes bright {
+    from {
+        position: relative;
+        width: 18rem;
+        height: 18rem;
+        top: 0rem;
     }
-    .white-key {
-        border: .1rem #D30F2C solid;
+    to {
+        position: relative;
+        width: 36rem;
+        height: 36rem;
+        top: -2rem;
     }
-    .black-key.active {
-        background-color: #713dae;
+}
+/*End of Resume Animations*/
+
+/*About me Animation*/
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*End of About me Animations*/
+
+/*End of Animations*/
+
+
+
+
+/*Fonts*/
+@font-face {
+    src: url('../fonts/PhantomRush.ttf');
+    font-family: font;
+}
+/*End of fonts*/
+
+
+
+/*Media Queries*/
+@media (max-width:1550px) {
+    .about-me {
+        #AM-img {
+            width: 45rem;
+            height: 35rem;
+        }
+    }
+    #website {
+        width: 44rem;
     }
 }
