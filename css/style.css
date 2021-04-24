@@ -173,6 +173,7 @@ body {
 /*Gallery*/
 #website {
   width: 50rem;
+  height: 30rem;
   border: white 0.3rem solid;
   -webkit-box-shadow: #1352b1 0.1rem 0rem 2rem;
           box-shadow: #1352b1 0.1rem 0rem 2rem;
@@ -243,7 +244,7 @@ body {
   font-size: 3rem;
 }
 
-#html {
+#html-skill {
   text-align: center;
   color: white;
   font-size: 3rem;
@@ -507,14 +508,11 @@ table td {
 }
 
 #tony-gate {
-  border: white 0.3rem solid;
-}
-
-#tony-gate {
   width: 28rem;
   height: 25rem;
   -webkit-box-shadow: #1352b1 0.1rem 0rem 2rem;
           box-shadow: #1352b1 0.1rem 0rem 2rem;
+  border: white 0.3rem solid;
 }
 
 #hat {
@@ -619,6 +617,7 @@ fieldset {
   color: #D30F2C;
 }
 
+/*End of universal darkmode*/
 /*Home page Darkmode*/
 .darkmode .overview #overview-text {
   text-shadow: #ae7ee6 0.3rem 0rem 1rem;
@@ -690,17 +689,17 @@ fieldset {
 
 /*Resume Darkmode End*/
 /*Gallery Darkmode*/
-.gallery-container-one a #website {
+.darkmode .gallery-container-one a #website {
   -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
           box-shadow: #713dae 0.3rem 0rem 1rem;
 }
 
-.gallery-container-two a #website {
+.darkmode .gallery-container-two a #website {
   -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
           box-shadow: #713dae 0.3rem 0rem 1rem;
 }
 
-.gallery-container-three a #website {
+.darkmode .gallery-container-three a #website {
   -webkit-box-shadow: #713dae 0.3rem 0rem 1rem;
           box-shadow: #713dae 0.3rem 0rem 1rem;
 }
@@ -858,14 +857,474 @@ fieldset {
 }
 
 /*End of fonts*/
+/*Screen Size Variables*/
+/*End of screen size variables*/
 /*Media Queries*/
-@media (max-width: 1550px) {
+@media screen and (max-width: 1550px) {
   .about-me #AM-img {
     width: 45rem;
     height: 35rem;
   }
   #website {
     width: 44rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*Applies to all*/
+  #heading {
+    font-size: 3rem;
+  }
+  #nav, #nav-active {
+    font-size: 1.25rem;
+  }
+  #switchToDarkMode {
+    font-size: 1.25rem;
+  }
+  /*Home page*/
+  .previous, .next, .darkmode .next {
+    font-size: 2.5rem;
+  }
+  #slide, #slide-2, #logo {
+    width: 24.5rem;
+    height: 19.5rem;
+  }
+  .darkmode .slideShow .overview a #logo-2 {
+    width: 24.5rem;
+    height: 19.5rem;
+  }
+  #overview-text {
+    font-size: 1.5rem;
+    max-width: 24.5rem;
+  }
+  /*Resume*/
+  #resume {
+    width: 27rem;
+  }
+  #skills {
+    font-size: 2.25rem;
+  }
+  #coding-skills {
+    font-size: 2.25rem;
+  }
+  #html-skill {
+    font-size: 1.5rem;
+  }
+  #sun {
+    width: 8rem;
+    height: 8rem;
+  }
+  @-webkit-keyframes bright {
+    from {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 11.5rem;
+      height: 11.5rem;
+      top: -1.5rem;
+    }
+  }
+  @keyframes bright {
+    from {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 11.5rem;
+      height: 11.5rem;
+      top: -1.5rem;
+    }
+  }
+  /*Gallery*/
+  #website {
+    width: 14rem;
+    height: 10rem;
+  }
+  .gallery-container-one {
+    gap: 1.5rem;
+  }
+  .gallery-container-two {
+    gap: 1.5rem;
+  }
+  .gallery-container-three {
+    gap: 1.5rem;
+  }
+  /*About Me*/
+  .about-me #hello {
+    font-size: 2rem;
+  }
+  .about-me #AM-text {
+    font-size: 1.5rem;
+  }
+  .about-me #AM-img {
+    width: 19rem;
+    height: 9rem;
+  }
+  #hobbies {
+    font-size: 2rem;
+    padding-top: 0.5rem;
+  }
+  /*Piano*/
+  .white-key {
+    width: 4.5rem;
+    height: 16rem;
+  }
+  .black-key {
+    width: 2.25rem;
+    height: 10rem;
+  }
+  /*End of piano*/
+  .music {
+    display: block;
+    margin: auto;
+  }
+  #guitar {
+    width: 13rem;
+    height: 23rem;
+    display: block;
+    margin: auto;
+  }
+  .tony-drag-and-drop {
+    gap: 1.25rem;
+  }
+  #tony-gate {
+    width: 14rem;
+    height: 11rem;
+  }
+  #hat {
+    width: 13rem;
+    height: 8rem;
+  }
+  .passwordSetup {
+    gap: 1.25rem;
+  }
+  fieldset {
+    font-size: 0.75rem;
+  }
+  #codeSubmit {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  /*Applies to all*/
+  #heading {
+    font-size: 3.5rem;
+  }
+  #nav, #nav-active {
+    font-size: 1.75rem;
+  }
+  #switchToDarkMode {
+    font-size: 1.75rem;
+  }
+  /*Home page*/
+  .previous, .next, .darkmode .next {
+    font-size: 3rem;
+  }
+  #slide, #slide-2, #logo {
+    width: 40rem;
+    height: 35rem;
+  }
+  .darkmode .slideShow .overview a #logo-2 {
+    width: 40rem;
+    height: 35rem;
+  }
+  #overview-text {
+    font-size: 1.75rem;
+    max-width: 40rem;
+  }
+  /*Resume*/
+  #resume {
+    width: 34rem;
+  }
+  #skills {
+    font-size: 2.5rem;
+  }
+  #coding-skills {
+    font-size: 2.5rem;
+  }
+  #html-skill {
+    font-size: 1.5rem;
+  }
+  #sun {
+    width: 10rem;
+    height: 10rem;
+  }
+  @-webkit-keyframes bright {
+    from {
+      position: relative;
+      width: 10rem;
+      height: 10rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      top: -1rem;
+    }
+  }
+  @keyframes bright {
+    from {
+      position: relative;
+      width: 10rem;
+      height: 10rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      top: -1rem;
+    }
+  }
+  /*Gallery*/
+  #website {
+    width: 23rem;
+    height: 17rem;
+  }
+  .gallery-container-one {
+    gap: 1.5rem;
+  }
+  .gallery-container-two {
+    gap: 1.5rem;
+  }
+  .gallery-container-three {
+    gap: 1.5rem;
+  }
+  /*About Me*/
+  .about-me #hello {
+    font-size: 2rem;
+  }
+  .about-me #AM-text {
+    font-size: 2rem;
+  }
+  .about-me #AM-img {
+    width: 24rem;
+    height: 14rem;
+  }
+  #hobbies {
+    font-size: 2.25rem;
+    padding-top: 0.5rem;
+  }
+  /*Piano*/
+  .white-key {
+    width: 6rem;
+    height: 18rem;
+  }
+  .black-key {
+    width: 3rem;
+    height: 11rem;
+  }
+  /*End of piano*/
+  .music {
+    display: block;
+    margin: auto;
+  }
+  #guitar {
+    width: 18rem;
+    height: 28rem;
+    display: block;
+    margin: auto;
+  }
+  .tony-drag-and-drop {
+    gap: 1.25rem;
+  }
+  #tony-gate {
+    width: 20rem;
+    height: 17rem;
+  }
+  #hat {
+    width: 18rem;
+    height: 13rem;
+  }
+  .passwordSetup {
+    gap: 1.25rem;
+  }
+  fieldset {
+    font-size: 1.25rem;
+  }
+  #codeSubmit {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /*Applies to all*/
+  #heading {
+    font-size: 4.25rem;
+  }
+  #nav, #nav-active {
+    font-size: 2rem;
+  }
+  #switchToDarkMode {
+    font-size: 1.25rem;
+  }
+  /*Home page*/
+  .previous, .next, .darkmode .next {
+    font-size: 3rem;
+  }
+  #slide, #slide-2, #logo {
+    width: 48rem;
+    height: 43rem;
+  }
+  .darkmode .slideShow .overview a #logo-2 {
+    width: 48rem;
+    height: 43rem;
+  }
+  #overview-text {
+    font-size: 2rem;
+    max-width: 48rem;
+  }
+  /*Resume*/
+  #resume {
+    width: 44rem;
+  }
+  #skills {
+    font-size: 3rem;
+  }
+  #coding-skills {
+    font-size: 3rem;
+  }
+  #html-skill {
+    font-size: 2rem;
+  }
+  #sun {
+    width: 14rem;
+    height: 14rem;
+  }
+  @-webkit-keyframes bright {
+    from {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 18rem;
+      height: 18rem;
+      top: -1.5rem;
+    }
+  }
+  @keyframes bright {
+    from {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      top: 0rem;
+    }
+    to {
+      position: relative;
+      width: 18rem;
+      height: 18rem;
+      top: -1.5rem;
+    }
+  }
+  /*Gallery*/
+  #website {
+    width: 31rem;
+    height: 20rem;
+  }
+  .gallery-container-one {
+    gap: 1.5rem;
+  }
+  .gallery-container-two {
+    gap: 1.5rem;
+  }
+  .gallery-container-three {
+    gap: 1.5rem;
+  }
+  /*About Me*/
+  .about-me #hello {
+    font-size: 2.5rem;
+  }
+  .about-me #AM-text {
+    font-size: 2.5rem;
+  }
+  .about-me #AM-img {
+    width: 30rem;
+    height: 20rem;
+  }
+  #hobbies {
+    font-size: 2.75rem;
+    padding-top: 0.5rem;
+  }
+  /*Piano*/
+  .white-key {
+    width: 7rem;
+    height: 21rem;
+  }
+  .black-key {
+    width: 3.5rem;
+    height: 13.5rem;
+  }
+  /*End of piano*/
+  .music {
+    display: block;
+    margin: auto;
+  }
+  #guitar {
+    width: 22rem;
+    height: 32rem;
+    display: block;
+    margin: auto;
+  }
+  .tony-drag-and-drop {
+    gap: 1.25rem;
+  }
+  #tony-gate {
+    width: 23rem;
+    height: 20rem;
+  }
+  #hat {
+    width: 20rem;
+    height: 15rem;
+  }
+  .passwordSetup {
+    gap: 1.25rem;
+  }
+  fieldset {
+    font-size: 1.5rem;
+  }
+  #codeSubmit {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*Applies to all*/
+  #heading {
+    font-size: 4.5rem;
+  }
+  #nav, #nav-active {
+    font-size: 2rem;
+  }
+  #switchToDarkMode {
+    font-size: 1.5rem;
+  }
+  /*Home page*/
+  .previous, .next, .darkmode .next {
+    font-size: 4rem;
+  }
+  #slide, #slide-2, #logo {
+    width: 50rem;
+    height: 45rem;
+  }
+  .darkmode .slideShow .overview a #logo-2 {
+    width: 50rem;
+    height: 45rem;
+  }
+  #overview-text {
+    font-size: 2.5rem;
+    max-width: 50rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

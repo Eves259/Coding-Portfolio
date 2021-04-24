@@ -1,7 +1,7 @@
 //Darkmode
 function dark () {
-    var element = document.body;
-    element.classList.toggle('darkmode');
+    var element = document.body; //Sets the variable element equal to the HTML body
+    element.classList.toggle('darkmode'); //This allows darkmode to be toggled on and off
 }
 
 //Piano
@@ -21,8 +21,8 @@ keys.forEach(function(key) {
 document.addEventListener('keydown', function(e) { //finding the index of the key pressed and then coresponding it to the index in the array. The keys are in the same order as the array
     if (e.repeat) return;
     const key = e.key;
-    const whiteKeyIndex = whiteKeys.indexOf(key);
-    const blackKeyIndex = blackKeys.indexOf(key);
+    const whiteKeyIndex = whiteKeys.indexOf(key);//Gets the index of the whitekeys
+    const blackKeyIndex = blackKeys.indexOf(key);//Gets the index of the black keys
 
     if(whiteKeyIndex > -1) playNote(WK[whiteKeyIndex]);
     if(blackKeyIndex > -1) playNote(BK[blackKeyIndex]);//-1 is returned when it can't find anything, so this is for if it finds something
@@ -39,10 +39,10 @@ function playNote(key) {
 };
 
 //Password Reveal
-let keysPressed = {};
+let keysPressed = {}; //keysPressed is set equal to an object
 
 //Answer 3
-document.addEventListener('keydown', function keyPressTest(event) {
+document.addEventListener('keydown', function keyPressTest(event) { //These are used to test if a key is being pressed down. If three keys are being pressed at the same time then it reveals an answer
     keysPressed[event.key] = true;
     if (keysPressed['x'] && keysPressed['v'] && keysPressed['n']) {
         $('#answer-3').css('display', 'block');
@@ -102,7 +102,7 @@ document.addEventListener('keyup', function keyPressClear(event) {
 });
 
 //Game
-    $('#game-button-1').click(function () {
+    $('#game-button-1').click(function () { //This causes whatever button is clicked on to spin and change color. If all of the colors are the same then an answer is revealed. Buttons affect other buttons.
         $('#game-button-1').toggleClass('rotate');
         $('#game-button-2').toggleClass('rotate');
         if ($('#game-button-1').has('rotate') && $('#game-button-2').hasClass('rotate') && $('#game-button-3').hasClass('rotate') && $('#game-button-4').hasClass('rotate')) {
@@ -145,7 +145,7 @@ function drag(ev) {
     ev.dataTransfer.setData("img", ev.target.id);
 }
 
-function drop(ev) {
+function drop(ev) { //This is used to drag and drop an image onto another one and then change the image to a new one
     ev.preventDefault();
     var data = ev.dataTransfer.getData("img");
     ev.target.appendChild(document.getElementById(data));
@@ -154,7 +154,7 @@ function drop(ev) {
 }
 
 //Password
-function password() {
+function password() { //Allows you to view what you typed into the textbox
     var code = document.getElementById("secretCode");
     if (code.type === "password") {
         code.type="text";   
@@ -163,7 +163,7 @@ function password() {
     }
 }
 
-function onSubmit() {
+function onSubmit() { //This is used to take the user to a new page if the code is correct. If it isn't the button's border turns red and a hint is given
 if (document.getElementById('secretCode').value == 'HORIZON') {
     $('#codeSubmit').css('border', 'solid #0BA674 .1rem');
     window.location.href='tony.html';
@@ -175,3 +175,4 @@ if (document.getElementById('secretCode').value == 'HORIZON') {
     }, 300);
 }
 }
+

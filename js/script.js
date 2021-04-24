@@ -1,7 +1,7 @@
 //Darkmode
 function dark () {
-    var element = document.body;
-    element.classList.toggle('darkmode');
+    var element = document.body; //Sets the variable element equal to the HTML body
+    element.classList.toggle('darkmode');//This allows darkmode to be toggled on and off
 }
 
 //Slideshow
@@ -16,7 +16,7 @@ function currentSlide(n) {
     showSlides(slideNumber = n);
 }
 
-function showSlides(n) {
+function showSlides(n) { //This is used to change the image being shown in the slideshow. It hides the old image and displays a new one when the arrow is pressed. 
     var i = 0;
     var slides = document.getElementsByClassName('overview');
     if (n > slides.length) {

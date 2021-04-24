@@ -9,10 +9,13 @@
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
 </head>
 <body>
+
+    <!--This is the heading for all pages-->
     <div class="header">
         <h1 id="heading">Coding Portfolio</h1>
     </div>
     
+    <!--This is the navbar used for all pages-->
     <div class="universalNavbar">
         <button id="switchToDarkMode" onclick="dark()">Switch Colors</button>
         <button id="nav" onclick="window.location.href='../index.html';">Home</button>
@@ -28,7 +31,7 @@
 
     <p id="AM-text">I am 17 and I am from Phoenix, Arizona</p><br>
 
-    <div class="center-images">
+    <div class="center-images"> <!--This is used to center all of the images held inside-->
     <img id="AM-img" src="../images/mountain.jpg">
     <img id="AM-img" src="../images/deems grass.jpg">
     </div><br>
@@ -47,8 +50,8 @@
 
     <p id="instrustructions">(play these chords: Dm, F, Am, G, C-Use the bottom rows of keys to play)</p>
 
-    <div class="music">
-    <div class="piano">
+    <div class="music"> <!--This centers the piano and the image so they are next to eachother-->
+    <div class="piano"> <!--This holds all of the piano's data-->
         <div data-note="C" class="white-key key"></div>
         <div data-note="Db" class="black-key key"></div>
         <div data-note="D" class="white-key key"></div>
@@ -79,7 +82,7 @@
         <img id="guitar" src="../images/guitar.jpg">
         </div>
 
-        <div class="answers">
+        <div class="answers"> <!--This is where the piano password answers are held-->
         <p id="answer-3">R</p>
         <p id="answer-4">I</p>
         <p id="answer-5">Z</p>
@@ -89,7 +92,7 @@
 
         <h1 id="hobbies">Games</h1><br>
 
-        <div class="game">
+        <div class="game"> <!--This is linked to a game that uses jQuery. You have to get the buttons to match-->
         <div id="block"><button class="game-style" id="game-button-1"></button></div>
         <div id="block"><button class="game-style" id="game-button-2"></button></div>
         <div id="block"><button class="game-style" id="game-button-3"></button></div>
@@ -105,7 +108,7 @@
 
         <br>
 
-        <div class="tony-drag-and-drop">
+        <div class="tony-drag-and-drop"> <!--This is linked to a function that allows you to drag and drop an image-->
         <div id="tony" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="tony-gate" src="../images/Tony gate.jpg"></div>
 
         <div id="tony" draggable="true" ondragstart="drag(event)"><img id="hat" src="../images/hat.png"></div>
@@ -113,7 +116,7 @@
 
     <br><br>
     
-    <div class="passwordSetup">
+    <div class="passwordSetup"> <!--This is used for the secret code-->
     <form action="#">
 
     <fieldset>
@@ -126,11 +129,12 @@
     
     </form>
 
-    <button id="codeSubmit" onclick="onSubmit()">Submit</button>
-    </div>
+    <button id="codeSubmit" data-bs-toggle="popover" title="The code can also be found by searching the console or by looking outside." onclick="onSubmit();">Submit</button>
+    </div> <!--This submits the code and when you hover over the submit button it gives you a hint.-->
 
     <br><br>
-    
+
+<!--This is the footer used for all of the pages-->
     <div class="universalFooter">
         <h2 id="footer-text">Contact Info/Github</h2>
         <h3 id="contact">Phone Number: <a id="contact-number">(480)-721-1229</a></h3>
